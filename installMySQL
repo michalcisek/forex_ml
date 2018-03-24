@@ -1,0 +1,10 @@
+sudo apt-get install mysql-server
+mysql_secure_installation
+
+## check if mysql is running
+systemctl status mysql.service
+## or use
+mysqladmin -p -u root version
+
+## to log in to MySQL
+mysql -u root -p
