@@ -40,7 +40,7 @@ class firstStrategy(bt.Strategy):
 cerebro = bt.Cerebro()
 cerebro.addstrategy(firstStrategy)
         
-con = sqlalchemy.create_engine('mysql://root:nasdaq93@127.0.0.1/hedge_fund') 
+con = sqlalchemy.create_engine('mysql+pymysql://root:nasdaq93@127.0.0.1/hedge_fund') 
 
 data = pd.read_sql("call change_timeframe('eurusd', '2015-01-01', '2015-12-31', 15);", con)
 
